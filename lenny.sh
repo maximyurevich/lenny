@@ -12,27 +12,27 @@ IDEAPAD_ACPI='/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/fan_mode'
 
 function clean_dust() {
 
-    local key=$1
+	local key=$1
 
-    case $key in 
-    0 | --silent)
-        echo 0 > $IDEAPAD_ACPI
-    ;;
-    1 | --standard)
-        echo 1 > $IDEAPAD_ACPI
-    ;;
-    2 | --dust)
-	echo 2 > $IDEAPAD_ACPI
-    ;;
-    4 | --efficient)
-	echo 4 > $IDEAPAD_ACPI    
-    esac
+	case $key in
+	0 | --silent)
+		echo 0 >"$IDEAPAD_ACPI"
+		;;
+	1 | --standard)
+		echo 1 >"$IDEAPAD_ACPI"
+		;;
+	2 | --dust)
+		echo 2 >"$IDEAPAD_ACPI"
+		;;
+	4 | --efficient)
+		echo 4 >"$IDEAPAD_ACPI"
+		;;
+	esac
 
 }
 
 function main() {
-  clean_dust "$@"
+	clean_dust "$@"
 }
 
 main "$@"
-
