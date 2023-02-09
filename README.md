@@ -13,7 +13,7 @@ There are four available modes:
 ```
 $ git clone https://github.com/maximyurevich/lenny
 $ cd lenny
-$ mv lenny.sh /bin/lenny
+$ sudo mv lenny.sh /bin/lenny
 ```
 ## Usage
 
