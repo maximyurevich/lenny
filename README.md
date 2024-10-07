@@ -18,5 +18,14 @@ $ sudo mv lenny.sh /bin/lenny
 ## Usage
 
 ```
-$ sudo lenny 0
+$ sudo lenny 4
+```
+
+## Cron
+
+If you want this script to run perriodically, you can use cron
+
+```
+sudo crontab -e
+0 */8 * * * lenny 4
 ```
